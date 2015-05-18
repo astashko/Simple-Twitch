@@ -1,0 +1,34 @@
+/* Input.css */
+.moon-input {
+	.moon-body-text;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+	box-shadow: none;
+	color: @moon-input-font-color;
+}
+.enyo-locale-non-latin .moon-input {
+	.enyo-locale-non-latin .moon-body-text;
+}
+.moon-neutral .moon-input {
+   color: @moon-input-font-color;
+}
+.moon-input-decorator.moon-focused .moon-input {
+	cursor: text;
+}
+.moon-input-decorator.moon-disabled .moon-input {
+	cursor: default;
+}
+.moon-input-decorator > input::-webkit-input-placeholder {
+	color: @moon-input-placeholder-color;
+}
+.moon-input-decorator > input:-moz-placeholder {
+	color: @moon-input-placeholder-color;
+}
+/* IE10 */
+.moon-input-decorator > input:-ms-input-placeholder {
+	color: @moon-input-placeholder-color;
+}

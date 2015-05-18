@@ -1,0 +1,36 @@
+/*
+	Put anything you reference with "url()" in ../assets/
+	This way, you can minify your application, and just remove the "source" folder for production
+*/
+.enyo-gridlist {
+	height: 100%;
+	/*activate the GPU for compositing each page */
+  	-webkit-transform: translate3d(0, 0, 0);
+  	z-index: 1;
+}
+.enyo-gridlist-row {
+	display: inline-block;
+	background-color: #000;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	vertical-align: top;
+	border: 0;
+	padding: 0;
+	margin: 0 auto;
+  	/* TODO: Investigate if these properties cause scrolling performance issues */
+  	/*
+  	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	*/
+}
+.enyo-gridlist-dummy {
+	display:inline-block;
+	width:auto;
+	height:auto;
+	z-index: -1;
+}

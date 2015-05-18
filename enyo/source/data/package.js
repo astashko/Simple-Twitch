@@ -1,0 +1,9 @@
+enyo.depends(
+	"Source.js",
+	"sources",
+	"Store.js",
+	"Model.js",
+	"RelationalModel.js",
+	"Collection.js",
+	"ModelController.js"
+);

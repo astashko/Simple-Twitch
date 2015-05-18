@@ -1,0 +1,12 @@
+{
+    "sourcePath":"../../..",
+    "name": "iLib",
+    "ns": "ilib.sample",
+    "loadPackages": "$lib/enyo-ilib/full-package.js $lib/enyo-ilib/samples",
+    "samples": [
+        {"name": "Locale Info", "path": "$lib/enyo-ilib/samples/LocaleInfo"},
+        {"name": "Date Formatting", "path": "$lib/enyo-ilib/samples/DateFormatting"},
+        {"name": "Advanced Date Formatting", "path": "$lib/enyo-ilib/samples/AdvDateFormatting"},
+        {"name": "Number Formatting", "path": "$lib/enyo-ilib/samples/NumberFormatting"}        
+    ]
+}

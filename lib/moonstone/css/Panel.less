@@ -1,0 +1,113 @@
+.moon-panel {
+	-webkit-transform: scale3d(1,1,1);
+	overflow: hidden;
+	padding: 0;
+	padding: 20px 10px;
+	height: 100%;
+	&.enyo-fit {
+		height: auto;
+	}
+}
+.moon-panel-viewport {
+	-webkit-transform: scale3d(1,1,1);
+	overflow: hidden;
+	position: relative;
+}
+.moon-panel-content-wrapper {
+	-webkit-transform: scale3d(1,1,1);
+	z-index: 2;
+	box-sizing: border-box;
+}
+.moon-panel-body {
+	overflow: hidden;
+	position: relative;
+	padding-top: 10px;
+}
+
+/* Breadcrumb */
+.moon-panel-breadcrumb {
+	-webkit-transform: scale3d(1,1,1);
+	width: 210px + (@moon-spotlight-outset * 2);
+	height: 370px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.moon-panel-breadcrumb-viewport {
+	-webkit-transform: scale3d(1,1,1);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	overflow: hidden;
+}
+.moon-panel-mini-header-wrapper {
+	-webkit-transform: scale3d(1,1,1);
+	margin: @moon-spotlight-outset 0 0 0;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	height: 360px;
+	width: 100%;
+	padding: 0 @moon-spotlight-outset @moon-spotlight-outset @moon-spotlight-outset;
+	box-sizing: border-box;
+}
+.moon-panel-mini-header {
+	margin-top: 25px;
+	color: @moon-header-text-color;
+	display: block;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.spotlight .moon-panel-mini-header{
+	color:@moon-spotlight-text-color;
+}
+.moon-panel-mini-header-title-above {
+	color: @moon-header-text-color;
+	border-top: 2px solid @moon-spotlight-text-color;
+	padding-top: 5px;
+}
+.spotlight .moon-panel-mini-header-title-above {
+	color: @moon-spotlight-text-color;
+}
+
+.moon-panel .moon-panel-mini-header-wrapper.spotlight {
+	background: @moon-pink;
+	color: @moon-white;
+	.moon-panel-mini-header-title-above {
+		border-top: 2px solid transparent;
+	}
+}
+
+/* Activity Panels Overrides */
+.moon-panels.activity {
+	.moon-panel {
+		padding: 0;
+	}
+	.moon-panel-mini-header-title-above {
+		border-top: 2px solid @moon-header-border-color;
+	}
+	.moon-panel-mini-header,
+	.moon-panel-mini-header-title-above {
+		color: @moon-header-text-color;
+	}
+	.moon-panel-mini-header-wrapper.spotlight {
+		.moon-panel-mini-header,
+		.moon-panel-mini-header-title-above {
+			color: @moon-white;
+		}
+	}
+}
+
+/* AlwaysViewing Overrides */
+.moon-panels.always-viewing {
+	.moon-panel {
+		padding: 0;
+	}
+	.moon-panel-mini-header,
+	.moon-panel-mini-header-title-above {
+		color: @moon-white;
+	}
+}

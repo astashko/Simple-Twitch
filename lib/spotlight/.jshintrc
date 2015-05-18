@@ -1,0 +1,23 @@
+{
+    "globals": {
+        "enyo": true,
+        "$L": true,
+        "onyx": true,
+        "moon": true
+    },
+    "es3": true,
+    "evil": false,
+    "regexdash": true,
+    "browser": true,
+    "wsh": false,
+    "trailing": false,
+    "smarttabs": true,
+    "sub": true,
+    "eqnull": true,
+    "laxbreak": true,
+    "curly": true,
+    "newcap": true,
+    "undef": true,
+    "unused": "vars",
+    "supernew": true
+}

@@ -1,0 +1,55 @@
+.flex-layout-sample {
+	font-size     : 11px;
+/*	border        : 5px solid #999;*/
+/*	padding       : 10px;*/
+	margin        : 10px;
+	border-radius : 5px;
+}
+
+	.flex-layout-sample.enyo-flex-layout > *,
+	.flex-layout-sample .enyo-flex-layout > * {
+		background-color : #CCCCDF;
+		text-align       : justify;
+/*		border           : 1px solid #333;*/
+
+		padding       : 10px;
+		margin        : 0px;
+		border-radius : 5px;
+/*		box-shadow    : 2px 2px 5px #999;*/
+	}
+
+.flex-layout-sample .column {
+/*	width : 200px;*/
+}
+
+.flex-layout-sample .row {
+/*	height : 50px;*/
+}
+
+.flex-layout-sample .repeater-sample-item {
+	font-size : 14px;
+	margin    : 10px;
+}
+
+.flex-layout-sample .onyx-button {
+	font-size     : 14px;
+	width         : 190px;
+	margin-bottom : 10px;
+	border-radius : 7px;
+}
+
+/*.flex-container {
+	font-size     : 11px;
+	border        : 5px solid #CCC;
+	padding       : 10px;
+	margin        : 10px;
+	border-radius : 5px;
+}
+
+	.flex-container > * {
+		background-color : #CCC;
+		text-align       : justify;
+		border           : 1px solid #999;
+		padding          : 10px;
+		border-radius    : 5px;
+	}*/

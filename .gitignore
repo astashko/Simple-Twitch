@@ -1,0 +1,6 @@
+.settings/
+deploy/
+OutputIPK/
+WebContent/
+.npmignore
+.project

@@ -1,0 +1,18 @@
+.enyo-flex-layout {
+	position: relative;             /* To handle inline cases in sampler */
+	overflow: hidden;               /*  */
+}
+	.enyo-flex-layout > * {
+		display: inline-block;      /* To prevent block elements from stretching beyond remaining boundaries */
+		position: absolute;
+	}
+
+
+/* This class is applied and removed during reflow to allow correct height measuring */
+
+.enyo-flex-layout-relative {
+	min-height: auto !important;
+}
+	.enyo-flex-layout-relative > * {
+		position: relative !important;
+	}

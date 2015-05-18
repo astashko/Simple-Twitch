@@ -1,0 +1,10 @@
+{
+	"sourcePath":"../../..",
+	"name": "webOS",
+	"ns": "enyo.cordova.sample",
+	"loadPackages": "$lib/enyo-webos $lib/enyo-webos/samples",
+	"samples": [
+		{"name": "LunaService", "path":"$lib/enyo-webos/samples/LunaService", "css":"sample"},
+		{"name": "webOS.js", "path":"$lib/enyo-webos/samples/webOS", "css":"sample"}
+	]
+}

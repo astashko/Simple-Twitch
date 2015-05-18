@@ -1,0 +1,15 @@
+.sample {
+}
+	.sample .spotlight {
+		background-color: yellow !important;
+	}
+	
+	.sample .container {
+		border: 2px solid #CCC;
+		margin: 20px;
+		padding: 20px;
+	}
+	
+	.sample .spotlight-current {
+		background-color: #CCFFFF;
+	}
