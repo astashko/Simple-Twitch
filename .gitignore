@@ -4,3 +4,4 @@ OutputIPK/
 WebContent/
 .npmignore
 .project
+nbproject/

@@ -8,17 +8,17 @@ enyo.kind({
 		isFetching: false
 	},
 	url: "streams",
-	loadStreams: function() {
-		this.fetch({params: {
-			limit: 20,
-			offset: 0,
-			game: "Dota 2",
-			on_site: 1
-		}})
-	},
 	parse: function(data) {
 		return data && data.streams;
 	},
+    fetchNextItems: function(count) {
+        var opts = { params: {}};
+        opts.params.on_site = 1;
+        opts.params.game = "Dota 2";
+        opts.params.offset = opts.offset || this.length;
+        opts.params.limit = count || 20;
+        this.fetch(opts);
+    },
 	fetch: function (opts) {
 		this.set("isFetching", true);
 		return this.inherited(arguments);
