@@ -1,35 +1,44 @@
 /* global enyo, simpletwitch */
 
 enyo.kind({
-	name: "simpletwitch.Navigation",
-	kind: "moon.Panels",
-	pattern: "alwaysviewing",
-	classes: "enyo-fit",
-	events: {
-		onChannelSelected: ""
-	},
-	components: [
-        {title: "Dota 2 top streams", collapsingHeader: true, classes: "moon-7h", components: [
-            {name: "resultList", kind: "simpletwitch.DataGridList"}
-        ],
-    	headerComponents: [
-    	    {kind: "moon.Spinner", content: "Loading...", name: "spinner"}
-    	]}
-	],
-	bindings: [
-		{from: ".$.resultList.collection.isFetching", to: ".$.spinner.showing"}
-	],
-	imageOnTap: function(inSender, inEvent) {
-		if (inEvent.model && inEvent.model.get("channel")) {
-			this.doChannelSelected({channel: inEvent.model.get("channel")});
-		}
-	}
-});
-
-enyo.kind({
-    name: "simpletwitch.DataGridList",
-    kind: "simpletwitch.AutoFetchingDataGridList",
-    minWidth: 320,
-    minHeight: 230,
-    collectionKind: "simpletwitch.TopDota2StreamsCollection"
+    name: "simpletwitch.Navigation",
+    kind: "moon.Panel",
+    classes: "enyo-fit",
+    title: "Simple Twitch",
+    autoNumber: false,
+    smallHeader: true,
+    handlers: {
+        onShowStreams: "showStreams",
+        onShowGames: "showGames",
+        onGameSelected: "gameSelected"
+    },
+    components: [
+        {kind: "enyo.FittableColumns", fit: true, components: [
+            {name: "menu", kind: "simpletwitch.MainMenu"},
+            {name: "streams", kind: "simpletwitch.StreamsDataGridListWrapper", fit: true, showing: false},
+            {name: "games", kind: "simpletwitch.GamesDataGridListWrapper", fit: true, showing: false}
+        ]}
+    ],
+    clearUI: function() {
+        this.$.streams.hide();
+        this.$.games.hide();
+        this.$.streams.clearData();
+        this.$.games.clearData();
+    },
+    showStreams: function() {
+        this.clearUI();
+        this.$.streams.initData();
+        this.$.streams.show();
+    },
+    showGames: function() {
+        this.clearUI();
+        this.$.games.initData();
+        this.$.games.show();
+    },
+    gameSelected: function(inSender, inEvent) {
+        this.clearUI();
+        this.$.menu.set("active", null);
+        this.$.streams.initData(inEvent.game);
+        this.$.streams.show();
+    }
 });

@@ -4,22 +4,10 @@ enyo.kind({
     name: "simpletwitch.AutoFetchingDataGridList",
     kind: "moon.DataGridList",
     fit: true,
-    minWidth: 320,
-    minHeight: 230,
-    components: [{
-        kind: "moon.GridListImageItem",
-        useSubCaption: true,
-        centered: false,
-        bindings: [
-        	{from: ".model.channel", to: ".caption", transform: function(val) { return val.display_name; }},
-        	{from: ".model.channel", to: ".subCaption", transform: function(val) { return val.status; }},
-        	{from: ".model.preview", to: ".source", transform: function(val) { return val.medium; }}
-        	],
-        ontap: "imageOnTap"
-	}],
-	/*bindings: [
-		{from: ".$.collection", to: ".collection"}
-	]*/
+    classes: "navigation-grid",
+    bindings: [
+        {from: ".$.collection", to: ".collection"}
+    ], 
     create: function() {
         this.inherited(arguments);
         this.addListener("paging", "onPaging", this);
@@ -27,9 +15,16 @@ enyo.kind({
             name: "collection",
 			kind: this.collectionKind
 		}, { owner: this });
-		this.set("collection", this.$.collection);
-		this.get("collection").fetchNextItems();
+    },
+    initData: function() {
+        this.loadInitialData();
+    },
+    loadInitialData: function() {
+        this.get("collection").fetchNextItems();
         enyo.job("populateSource", enyo.bind(this, "loadFirstThreePages"), 3000);
+    },
+    clearData: function() {
+        this.get("collection").destroyAll();
     },
     loadFirstThreePages: function() {
         var requestedItemsCount = this.controlsPerPage * 3 - this.get("collection").length;
@@ -45,4 +40,11 @@ enyo.kind({
     modelsAdded: function() {
         this.inherited(arguments);
     }
+});
+
+enyo.kind({
+    name: "simpletwitch.AutoFetchingDataGridListImageItem",
+    kind: "moon.GridListImageItem",
+    centered: false,
+    ontap: "itemSelected"
 });

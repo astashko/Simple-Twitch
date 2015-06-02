@@ -6,3 +6,18 @@
 
 .main-view {
 }
+
+.main-view .moon-header-title-below, .main-view .moon-header-sub-title-below {
+	max-height: 0;
+}
+
+.main-view .moon-header.moon-small-header {
+	height: 165px;
+}
+
+.moon-gridlist-imageitem .sub-caption {
+	font-size: 24px;
+}
+.navigation-grid-wrapper {
+	width: 1600px;
+}
