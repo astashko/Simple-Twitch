@@ -1,6 +1,6 @@
 {
-    "id": "com.andriy921.simpletwitch",
-    "version": "0.0.1",
+	"id": "com.andriy921.app.simpletwitch",
+    "version": "0.0.2",
     "vendor": "andriy921",
     "type": "web",
     "main": "index.html",
@@ -9,6 +9,8 @@
     "largeIcon": "largeIcon.png",
     "uiRevision": 2,
     "enyoVersion": "2.3",
+	"bgImage": "background.png",
+    "splashBackground": "splash.png",
     "onDeviceSource": {
         "enyo": "$enyo-framework/2.3/enyo",
         "lib/layout": "$enyo-framework/2.3/lib/layout",
