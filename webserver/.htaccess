@@ -1,0 +1,4 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteEngine on
+RewriteBase /
+RewriteRule "^stream\.m3u8$" "default.php"

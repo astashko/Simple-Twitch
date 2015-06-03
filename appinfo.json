@@ -1,6 +1,6 @@
 {
 	"id": "com.andriy921.app.simpletwitch",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "vendor": "andriy921",
     "type": "web",
     "main": "index.html",

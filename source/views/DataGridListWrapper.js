@@ -23,7 +23,6 @@ enyo.kind({
     ],
     itemSelected: function(inSender, inEvent) {
         this.doGameSelected({ game: inEvent.model });
-        console.log(inEvent.model);
     }
 });
 enyo.kind({
@@ -37,6 +36,5 @@ enyo.kind({
     ],
     itemSelected: function(inSender, inEvent) {
         this.doStreamSelected({ stream: inEvent.model });
-        console.log(inEvent.model);
     }
 });
